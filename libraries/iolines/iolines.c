@@ -41,7 +41,7 @@ int getword(char* word, int lim) {
     }
     if (isalpha(c) || c == '#' || c == '_') {
         for (; --lim > 0; w++) {
-            if (!isalnum(*w = getch()) || *w == '_') {
+            if (!isalnum(*w = getch()) && *w != '_') {
                 ungetch(*w);
                 break;
             }
@@ -85,6 +85,7 @@ int getword(char* word, int lim) {
     }
 
     *w = '\0';
+    printf("%d\n", c);
     return c;
 }
 

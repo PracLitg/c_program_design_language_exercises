@@ -14,6 +14,7 @@
 
 int getch();
 void ungetch(int c);
+int getword(char* word, int lim);
 int readlines(char* lineptr[], int nlines);
 void writelines(char* lineptr[], int nlines);
 void freeReadMemory(char* lineptr[], int nlines);
